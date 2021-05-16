@@ -1,0 +1,7 @@
+#86b049 - green
+
+#848484 - light grey
+
+#44444 - dark grey
+
+#1f1f1f - black-ish
