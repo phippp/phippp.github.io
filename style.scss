@@ -1,0 +1,219 @@
+$background: #1f1f1f;
+$background-2: #292929;
+$white: #ffffff;
+$white-2: rgba(255,255,255,0.8);
+$white-3: rgba(255,255,255,0.5);
+$grey: rgb(128, 128, 128);
+$black: #000000;
+$box-shadow: rgba(0,0,0,.25);
+
+*{
+    margin:0;
+    font-family: "Poppins", sans-serif;
+}
+
+//-----------------------------------------------------//
+//----------------------Nav-Bar------------------------//
+//-----------------------------------------------------//
+
+.flexbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flexbox-left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.flexbox-col {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav{
+    z-index: 10;
+    position:fixed;
+    top:0;
+    left:0;
+    background: $background;
+    height: 100%;
+    width:5em;
+    transition: width .25s cubic-bezier(.175, .685, .32, 1) ;
+    overflow-x: hidden;
+    overflow-y: auto;
+    &::-webkit-scrollbar-track{
+        background-color: $background;
+    }
+    &::-webkit-scrollbar{
+        width: .5rem;
+        background-color: $background;
+    }
+    &::-webkit-scrollbar-thumb{
+        background-color: aqua;
+    }
+    &:hover{
+        width:15em;
+        ul li .navbar-inner .link-text{
+            width: calc(100% - 4.5rem);
+            opacity: 1;
+        }
+    }
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        li{
+            &.navbar-logo{
+                margin: 0 0 2em 0;
+                width: 100%;
+                height: 5em;
+                background-color: $black;
+                .navbar-inner:hover{
+                    box-shadow: 0 17px 30px -10px $box-shadow;
+                }
+                img{
+                    height: 3em;
+                }
+            }
+            &.navbar-item{
+                padding: 0 .5em;
+                width: 100%;
+                cursor: pointer;
+            }
+            .navbar-inner{
+                color: $grey;
+                padding: 1em 0;
+                margin: 0 .5em;
+                width: 100%;
+                position: relative;
+                border-radius: .25em;
+                text-decoration: none;
+                transition: all .2s cubic-bezier(.175, .685, .32, 1);
+                &.flexbox-left:hover{
+                    color: $white;
+                    background-color: $background-2;
+                    box-shadow: 0 17px 30px -10px $box-shadow;
+                }
+                .navbar-item-inner-icon-wrapper{
+                    width: calc(4.5rem - 1em);
+                    position: relative;
+                    ion-icon{
+                        position: absolute;
+                        font-size: 1.4rem;
+                    }
+                }
+                .link-text{
+                    margin: 0;
+                    width: 0;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    transition: all .35s cubic-bezier(.175, .685, .32, 1);
+                    overflow: hidden;
+                    opacity: 0;
+                }
+            }
+        }
+    }
+}
+
+//-----------------------------------------------------//
+//-----------------------Home--------------------------//
+//-----------------------------------------------------//
+
+main.home{
+    margin-top: 1em;
+    width: calc(100% - 5rem);
+    float: right;
+    transition: width .2s cubic-bezier(.175, .685, .32, 1);
+    &.shrink{
+        width: calc(100% - 16rem);
+    }
+}
+
+//-----------------------------------------------------//
+//---------------------Project-------------------------//
+//-----------------------------------------------------//
+
+main.project{
+    margin-top: .5em;
+    width: calc(100% - 5rem);
+    float: right;
+    display: flex;
+    justify-content: space-evenly;
+    flex: 1;
+    align-items: stretch;
+    flex-flow: row wrap;
+    transition: width .2s cubic-bezier(.175, .685, .32, 1);
+    &.shrink{
+        width: calc(100% - 16rem);
+    }
+    .project-container{
+        margin: .5em .25em;
+        min-height:450px;
+        width:calc((100% - 20em)/4);
+        min-width: 300px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        overflow: hidden;
+        border-radius: .5em;
+        background-color: $background;
+        color: $white;
+        text-align: center;
+        box-shadow: 0 17px 30px -10px $box-shadow;
+        img{
+            height:150px;
+            width:100%;
+            object-fit: cover;
+            box-shadow: 0 17px 30px -10px $box-shadow;
+        }
+        h3{
+            padding: .5rem .1rem;
+            font-size: 2em;
+        }
+        p{
+            padding: 0 1em;
+        }
+        .project-code-btn{
+            text-decoration: none;
+            padding: 1em;
+            margin:1em;
+            border-radius: .25em;
+            color: $grey;
+            background-color: $background;
+            transition: all .2s cubic-bezier(.175, .685, .32, 1); ;
+            &:hover{
+                color: $white;
+                background-color: $background-2;
+                box-shadow: 0 17px 30px -10px $box-shadow;
+            }
+            .icon-wrapper{
+                width: calc(4.5rem - 1em);
+                position: relative;
+                margin-left: -1.25em;
+                ion-icon{
+                    position: absolute;
+                    font-size: 1.4rem;
+                }
+            }
+        }
+
+    }
+}
+
+//-----------------------------------------------------//
+//--------------------Experience-----------------------//
+//-----------------------------------------------------//
+
+main.experience{
+    margin-top: 1em;
+    width: calc(100% - 5rem);
+    float: right;
+    transition: width .2s cubic-bezier(.175, .685, .32, 1);
+    &.shrink{
+        width: calc(100% - 16rem);
+    }
+}

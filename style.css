@@ -1,0 +1,272 @@
+* {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.flexbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flexbox-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flexbox-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #1f1f1f;
+  height: 100%;
+  width: 5em;
+  -webkit-transition: width 0.25s cubic-bezier(0.175, 0.685, 0.32, 1);
+  transition: width 0.25s cubic-bezier(0.175, 0.685, 0.32, 1);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+nav::-webkit-scrollbar-track {
+  background-color: #1f1f1f;
+}
+
+nav::-webkit-scrollbar {
+  width: .5rem;
+  background-color: #1f1f1f;
+}
+
+nav::-webkit-scrollbar-thumb {
+  background-color: aqua;
+}
+
+nav:hover {
+  width: 15em;
+}
+
+nav:hover ul li .navbar-inner .link-text {
+  width: calc(100% - 4.5rem);
+  opacity: 1;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+nav ul li.navbar-logo {
+  margin: 0 0 2em 0;
+  width: 100%;
+  height: 5em;
+  background-color: #000000;
+}
+
+nav ul li.navbar-logo .navbar-inner:hover {
+  -webkit-box-shadow: 0 17px 30px -10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 17px 30px -10px rgba(0, 0, 0, 0.25);
+}
+
+nav ul li.navbar-logo img {
+  height: 3em;
+}
+
+nav ul li.navbar-item {
+  padding: 0 .5em;
+  width: 100%;
+  cursor: pointer;
+}
+
+nav ul li .navbar-inner {
+  color: gray;
+  padding: 1em 0;
+  margin: 0 .5em;
+  width: 100%;
+  position: relative;
+  border-radius: .25em;
+  text-decoration: none;
+  -webkit-transition: all 0.2s cubic-bezier(0.175, 0.685, 0.32, 1);
+  transition: all 0.2s cubic-bezier(0.175, 0.685, 0.32, 1);
+}
+
+nav ul li .navbar-inner.flexbox-left:hover {
+  color: #ffffff;
+  background-color: #292929;
+  -webkit-box-shadow: 0 17px 30px -10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 17px 30px -10px rgba(0, 0, 0, 0.25);
+}
+
+nav ul li .navbar-inner .navbar-item-inner-icon-wrapper {
+  width: calc(4.5rem - 1em);
+  position: relative;
+}
+
+nav ul li .navbar-inner .navbar-item-inner-icon-wrapper ion-icon {
+  position: absolute;
+  font-size: 1.4rem;
+}
+
+nav ul li .navbar-inner .link-text {
+  margin: 0;
+  width: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  -webkit-transition: all 0.35s cubic-bezier(0.175, 0.685, 0.32, 1);
+  transition: all 0.35s cubic-bezier(0.175, 0.685, 0.32, 1);
+  overflow: hidden;
+  opacity: 0;
+}
+
+main.home {
+  margin-top: 1em;
+  width: calc(100% - 5rem);
+  float: right;
+  -webkit-transition: width 0.2s cubic-bezier(0.175, 0.685, 0.32, 1);
+  transition: width 0.2s cubic-bezier(0.175, 0.685, 0.32, 1);
+}
+
+main.home.shrink {
+  width: calc(100% - 16rem);
+}
+
+main.project {
+  margin-top: .5em;
+  width: calc(100% - 5rem);
+  float: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-transition: width 0.2s cubic-bezier(0.175, 0.685, 0.32, 1);
+  transition: width 0.2s cubic-bezier(0.175, 0.685, 0.32, 1);
+}
+
+main.project.shrink {
+  width: calc(100% - 16rem);
+}
+
+main.project .project-container {
+  margin: .5em .25em;
+  min-height: 450px;
+  width: calc((100% - 20em)/4);
+  min-width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow: hidden;
+  border-radius: .5em;
+  background-color: #1f1f1f;
+  color: #ffffff;
+  text-align: center;
+  -webkit-box-shadow: 0 17px 30px -10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 17px 30px -10px rgba(0, 0, 0, 0.25);
+}
+
+main.project .project-container img {
+  height: 150px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-box-shadow: 0 17px 30px -10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 17px 30px -10px rgba(0, 0, 0, 0.25);
+}
+
+main.project .project-container h3 {
+  padding: .5rem .1rem;
+  font-size: 2em;
+}
+
+main.project .project-container p {
+  padding: 0 1em;
+}
+
+main.project .project-container .project-code-btn {
+  text-decoration: none;
+  padding: 1em;
+  margin: 1em;
+  border-radius: .25em;
+  color: gray;
+  background-color: #1f1f1f;
+  -webkit-transition: all 0.2s cubic-bezier(0.175, 0.685, 0.32, 1);
+  transition: all 0.2s cubic-bezier(0.175, 0.685, 0.32, 1);
+}
+
+main.project .project-container .project-code-btn:hover {
+  color: #ffffff;
+  background-color: #292929;
+  -webkit-box-shadow: 0 17px 30px -10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 17px 30px -10px rgba(0, 0, 0, 0.25);
+}
+
+main.project .project-container .project-code-btn .icon-wrapper {
+  width: calc(4.5rem - 1em);
+  position: relative;
+  margin-left: -1.25em;
+}
+
+main.project .project-container .project-code-btn .icon-wrapper ion-icon {
+  position: absolute;
+  font-size: 1.4rem;
+}
+
+main.experience {
+  margin-top: 1em;
+  width: calc(100% - 5rem);
+  float: right;
+  -webkit-transition: width 0.2s cubic-bezier(0.175, 0.685, 0.32, 1);
+  transition: width 0.2s cubic-bezier(0.175, 0.685, 0.32, 1);
+}
+
+main.experience.shrink {
+  width: calc(100% - 16rem);
+}
+/*# sourceMappingURL=style.css.map */

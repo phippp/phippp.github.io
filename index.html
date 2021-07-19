@@ -1,79 +1,46 @@
-<html>
-    <head>
-        <title>Phillip Navarrete | Home</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="Keywords" content="">
-        <meta name="Description" content="">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
-        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-        <link rel="manifest" href="favicon/site.webmanifest">
-        <link rel="stylesheet" href="styles/stylesheet.css" type="text/css">
-    </head>
-    <body>
-        <header class="page-header container">
-            <a href="/index.html">
-                <button class = "header-icon-container active">
-                    <img class = "header-img-active" src = "images/icons/icon_person_white.png" alt="">
-                </button>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<nav id="navbar">
+    <ul class="navbar-items flexbox-col">
+        <li class="navbar-logo flexbox-left">
+            <a class="navbar-inner flexbox">
+                <img src="../images/london-map.png">
             </a>
-            <a href="/code.html">
-                <button class = "header-icon-container inactive">
-                    <img class = "header-img" src = "images/icons/icon_code_grey.png" alt="">
-                </button>
-            </a>
-            <a href="/gallery.html">
-                <button class = "header-icon-container inactive">
-                    <img class = "header-img" src = "images/icons/icon_screen_grey.png" alt="">
-                </button>
-            </a>
-            <a href="/career.html">
-                <button class = "header-icon-container inactive">
-                    <img class = "header-img" src = "images/icons/icon_star_grey.png" alt="">
-                </button>
-            </a>
-            <a href="/contact.html">
-                <button class = "header-icon-container inactive">
-                    <img class = "header-img" src = "images/icons/icon_message_grey.png" alt="">
-                </button>
-            </a>
-        
-        </header>
-        <!-- Splash header -->
-        <div class = "splash-container">
-            <img class = "splash-image-back" src="images/pexels-hilary-halliwell-38012.jpg">
-            <img class = "splash-image-front" src="images/image.jpg">
-            <h1 class = "splash-message">
-                Lol get gud
-            </h1>
-        </div>
-        <!-- About me section -->
-        <div class = "about-me-container">
-            <div class = "content-container">
-                <h3 class="subtitle">WHAT I DO</h3>
-                <p class = "about-me-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <img src = "images/parts/seperator_small_green.png">
-                <div class = "button-container">
-                    <button class = "about-button" onclick="window.print()">
-                        <img src ="images/icons/icon_print_grey.png"><p><b>RESUME</b></p>
-                    </button>
-                    <button class = "about-button" onclick="window.open('Phillip_Navarrete_Curriculum_Vitae.pdf')">
-                        <img src ="images/icons/icon_pdf_grey.png"><p><b>DOWNLOAD PDF</b></p>
-                    </button>
+        </li>
+        <li class="navbar-item flexbox-left">
+            <a class="navbar-inner flexbox-left" href="index.html">
+                <div class="navbar-item-inner-icon-wrapper flexbox">
+                    <ion-icon name="home-outline"></ion-icon>
                 </div>
-            </div>
-        </div>
-        <!-- Skills -->
-        <div class = "skills-container">
+                <span class="link-text">Home</span>
+            </a>
+        </li>
+        <li class="navbar-item flexbox-left">
+            <a class="navbar-inner flexbox-left" href="projects.html">
+                <div class="navbar-item-inner-icon-wrapper flexbox">
+                    <ion-icon name="folder-open-outline"></ion-icon>
+                </div>
+                <span class="link-text">Projects</span>
+            </a>
+        </li>
+        <li class="navbar-item flexbox-left">
+            <a class="navbar-inner flexbox-left" href="experience.html">
+                <div class="navbar-item-inner-icon-wrapper flexbox">
+                    <ion-icon name="person-outline"></ion-icon>
+                </div>
+                <span class="link-text">Experience</span>
+            </a>
+        </li>
+    </ul>
+</nav>
 
-        </div>
-
-    <br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br>
-    </body>
-</html>
+<main class="home">
+    
+</main>
+<!-- To compile the scss run: -->
+<!-- sass <filename.scss> <filename.css> -->

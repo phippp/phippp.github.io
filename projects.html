@@ -1,0 +1,144 @@
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="navbar.js"></script>
+
+<nav id="navbar">
+    <ul class="navbar-items flexbox-col">
+        <li class="navbar-logo flexbox-left">
+            <a class="navbar-inner flexbox">
+                <img src="images/london-map.png">
+            </a>
+        </li>
+        <li class="navbar-item flexbox-left">
+            <a class="navbar-inner flexbox-left" href="index.html">
+                <div class="navbar-item-inner-icon-wrapper flexbox">
+                    <ion-icon name="home-outline"></ion-icon>
+                </div>
+                <span class="link-text">Home</span>
+            </a>
+        </li>
+        <li class="navbar-item flexbox-left">
+            <a class="navbar-inner flexbox-left" href="projects.html">
+                <div class="navbar-item-inner-icon-wrapper flexbox">
+                    <ion-icon name="folder-open-outline"></ion-icon>
+                </div>
+                <span class="link-text">Projects</span>
+            </a>
+        </li>
+        <li class="navbar-item flexbox-left">
+            <a class="navbar-inner flexbox-left" href="experience.html">
+                <div class="navbar-item-inner-icon-wrapper flexbox">
+                    <ion-icon name="person-outline"></ion-icon>
+                </div>
+                <span class="link-text">Experience</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+<main class="project">
+    <!-- <section class="project-container">
+        <div class="project-content">
+            <img src="images/img1.jpg">
+            <h3 class="project-title">Neural Network</h3>
+            <p></p>
+        </div>
+        <a href="#" class="project-code-btn flexbox">
+            <div class="flexbox icon-wrapper">
+                <ion-icon name="code-slash-outline"></ion-icon>
+            </div>
+            <span class="btn-text">View Code</span>
+        </a>
+    </section> -->
+    <section class="project-container">
+        <div class="project-content">
+            <img src="images/background-5.jpg" srcset="images/background-5.jpg, images/background-5@2x.jpg 2x">
+            <!-- Image provided by Nick Hillier on Unsplash -->
+            <h3 class="project-title">Calendar</h3>
+            <p>
+                I am currently working on an online Calendar app.
+            </p>
+        </div>
+        <!-- <a href="#" class="project-code-btn flexbox">
+            <div class="flexbox icon-wrapper">
+                <ion-icon name="code-slash-outline"></ion-icon>
+            </div>
+            <span class="btn-text">View Code</span>
+        </a> -->
+    </section>
+    <section class="project-container">
+        <div class="project-content">
+            <img src="images/background-4.jpg" srcset="images/background-4.jpg, images/background-4@2x.jpg 2x">
+            <!-- Image provided by Scott Graham on Unsplash -->
+            <h3 class="project-title">Make it All - Helpdesk</h3>
+            <p>
+                As part of my Second year Team Project, we had to develop an online helpdesk using Laravel as a framework.
+            </p>
+        </div>
+        <a href="https://github.com/phippp/COB290-Part-3" class="project-code-btn flexbox">
+            <div class="flexbox icon-wrapper">
+                <ion-icon name="code-slash-outline"></ion-icon>
+            </div>
+            <span class="btn-text">View Code</span>
+        </a>
+    </section>
+    <section class="project-container">
+        <div class="project-content">
+            <img src="images/background-3.jpg" srcset="images/background-3.jpg, images/background-3@2x.jpg 2x">
+            <!-- Image provided by Anastasiia Chepinska on Unsplash -->
+            <h3 class="project-title">Calorie Counter</h3>
+            <p>
+                I developed an android mobile App using Java which allows the user to track calories.
+            </p>
+        </div>
+        <a href="https://github.com/phippp/Calorie-Counter" class="project-code-btn flexbox">
+            <div class="flexbox icon-wrapper">
+                <ion-icon name="code-slash-outline"></ion-icon>
+            </div>
+            <span class="btn-text">View Code</span>
+        </a>
+    </section>
+    <section class="project-container">
+        <div class="project-content">
+            <img src="images/background-2.jpg" srcset="images/background-2.jpg, images/background-2@2x.jpg 2x">
+            <!-- Image provided by Markus Spiske on Unsplash -->
+            <h3 class="project-title">Neural Network</h3>
+            <p>
+                Whilst studying AI Methods, I created an <abbr title="Artifical Neural Network">ANN</abbr> which can be trained on data and then predict values for given inputs.
+                My <abbr title="Artifical Neural Network">ANN</abbr> has many features that can help improve the time it takes to stabilise.
+                It can also be applied to different datasets as it can work for any number of inputs.
+            </p>
+        </div>
+        <a href="https://github.com/phippp/Artificial-Neural-Network" class="project-code-btn flexbox">
+            <div class="flexbox icon-wrapper">
+                <ion-icon name="code-slash-outline"></ion-icon>
+            </div>
+            <span class="btn-text">View Code</span>
+        </a>
+    </section>
+    <section class="project-container">
+        <div class="project-content">
+            <img src="images/background-1.jpg" srcset="images/background-1.jpg, images/background-1@2x.jpg 2x">
+            <!-- Image provided by Alexander Debiève on Unsplash -->
+            <h3 class="project-title">Arduino Game</h3>
+            <p>
+                I created an game using C++ that can run on Arduinos. It uses buttons as inputs and can generate random sequences that the user has to memorise.
+                The game has a story mode (linear progression untill the user loses), or you can create your own difficulty.
+            </p>
+        </div>
+        <a href="https://github.com/phippp/Arduino-Game" class="project-code-btn flexbox">
+            <div class="flexbox icon-wrapper">
+                <ion-icon name="code-slash-outline"></ion-icon>
+            </div>
+            <span class="btn-text">View Code</span>
+        </a>
+    </section>
+</main>
+
+<!-- To compile the scss run: -->
+<!-- sass <filename.scss> <filename.css> -->
