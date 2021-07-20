@@ -172,6 +172,7 @@ main.home h1.main-title {
 }
 
 main.home h4.welcome-message {
+  color: #6622cc;
   padding: 1rem 2rem;
 }
 
@@ -280,6 +281,7 @@ main.project .project-container .project-code-btn .icon-wrapper ion-icon {
 
 main.experience {
   margin-top: .5em;
+  margin-bottom: 5rem;
   width: calc(100% - 5rem);
   float: right;
   -webkit-box-orient: vertical;
@@ -312,11 +314,12 @@ main.experience .container {
 }
 
 main.experience .container h2 {
-  width: 100%;
+  width: calc(100% - 3.4em);
   margin: 1em 1.7em 0.5em;
 }
 
 main.experience .container section {
+  text-align: center;
   min-width: 350px;
   margin: .5em .25em;
   padding: 1em;
@@ -324,7 +327,68 @@ main.experience .container section {
   width: calc((100% - 18em) / 3);
 }
 
+main.experience .container section h4 {
+  color: gray;
+}
+
+main.experience .container section h5 {
+  color: #6622cc;
+}
+
 main.experience .container section:first-of-type {
   margin-left: 0;
+}
+
+main.experience .skills-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+}
+
+main.experience .skills-container div.skill-container {
+  margin: .5em .25em;
+  margin-left: 2.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+}
+
+main.experience .skills-container div.skill-container p {
+  width: 10rem;
+  margin-right: 1rem;
+}
+
+main.experience .skills-container div.skill-container > span {
+  width: 10rem;
+  margin-left: 1rem;
+}
+
+main.experience .skills-container div.skill-container .bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: gray;
+  width: 90%;
+  height: 10px;
+  border-radius: .5em;
+  overflow: hidden;
+}
+
+main.experience .skills-container div.skill-container .bar span {
+  content: " ";
+  width: 0;
+  background-color: #6622cc;
+  border-radius: .25em;
 }
 /*# sourceMappingURL=style.css.map */
