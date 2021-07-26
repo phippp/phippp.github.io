@@ -3,6 +3,9 @@
   font-family: "Poppins", sans-serif;
 }
 
+/*TODO:
+    - Less than 810 make navbar go up top and show text by default
+*/
 .flexbox {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -147,9 +150,16 @@ nav ul li .navbar-inner .link-text {
   opacity: 0;
 }
 
+/*TODO:
+    - Less than 1400 make p smaller so text is readable
+    - Less than 810 make background larger and move to right
+*/
 main.home {
-  margin-top: 1em;
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #fff), color-stop(80%, transparent)), url("images/wandsworth.png") no-repeat;
+  background: linear-gradient(to right, #fff 50%, transparent 80%), url("images/wandsworth.png") no-repeat;
+  background-position: right;
   width: calc(100% - 5rem);
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -167,7 +177,7 @@ main.home.shrink {
 }
 
 main.home h1.main-title {
-  padding: 2rem 2rem 1rem;
+  padding: 3rem 2rem 1rem;
   font-size: 3.5rem;
 }
 
@@ -178,6 +188,24 @@ main.home h4.welcome-message {
 
 main.home p.about-me {
   padding: 1rem 2rem;
+}
+
+main.home .socials-container {
+  padding: 1rem 2rem;
+  width: 50%;
+}
+
+main.home .socials-container p {
+  padding-bottom: 10px;
+}
+
+main.home .socials-container a {
+  color: #292929;
+  margin-right: 1.2rem;
+}
+
+main.home .socials-container a ion-icon {
+  font-size: 1.8rem;
 }
 
 main.project {
@@ -226,7 +254,7 @@ main.project .project-container {
   overflow: hidden;
   border-radius: .5em;
   background-color: #1f1f1f;
-  color: #ffffff;
+  color: #e8e8e8;
   text-align: center;
   -webkit-box-shadow: 0 17px 30px -10px rgba(0, 0, 0, 0.25);
           box-shadow: 0 17px 30px -10px rgba(0, 0, 0, 0.25);
@@ -323,7 +351,11 @@ main.experience .container section {
   min-width: 350px;
   margin: .5em .25em;
   padding: 1em;
-  border: 1px solid black;
+  background-color: #1f1f1f;
+  color: #e8e8e8;
+  -webkit-box-shadow: 0 17px 30px -10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 17px 30px -10px rgba(0, 0, 0, 0.25);
+  border-radius: .5em;
   width: calc((100% - 18em) / 3);
 }
 
@@ -339,7 +371,8 @@ main.experience .container section:first-of-type {
   margin-left: 0;
 }
 
-main.experience .skills-container {
+main.experience .skills-container section {
+  width: calc(100% - 10rem);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -349,7 +382,7 @@ main.experience .skills-container {
           flex-flow: column wrap;
 }
 
-main.experience .skills-container div.skill-container {
+main.experience .skills-container section div.skill-container {
   margin: .5em .25em;
   margin-left: 2.5em;
   display: -webkit-box;
@@ -364,17 +397,17 @@ main.experience .skills-container div.skill-container {
   width: 90%;
 }
 
-main.experience .skills-container div.skill-container p {
+main.experience .skills-container section div.skill-container p {
   width: 10rem;
   margin-right: 1rem;
 }
 
-main.experience .skills-container div.skill-container > span {
+main.experience .skills-container section div.skill-container > span {
   width: 10rem;
   margin-left: 1rem;
 }
 
-main.experience .skills-container div.skill-container .bar {
+main.experience .skills-container section div.skill-container .bar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -385,7 +418,7 @@ main.experience .skills-container div.skill-container .bar {
   overflow: hidden;
 }
 
-main.experience .skills-container div.skill-container .bar span {
+main.experience .skills-container section div.skill-container .bar span {
   content: " ";
   width: 0;
   background-color: #6622cc;

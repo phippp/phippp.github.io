@@ -3,6 +3,7 @@ $background-2: #292929;
 $white: #ffffff;
 $white-2: rgba(255,255,255,0.8);
 $white-3: rgba(255,255,255,0.5);
+$offwhite: #e8e8e8;
 $grey: rgb(128, 128, 128);
 $black: #000000;
 $box-shadow: rgba(0,0,0,.25);
@@ -17,6 +18,9 @@ $accent: #6622cc;
 //----------------------Nav-Bar------------------------//
 //-----------------------------------------------------//
 
+/*TODO:
+    - Less than 810 make navbar go up top and show text by default
+*/
 .flexbox {
     display: flex;
     justify-content: center;
@@ -124,9 +128,15 @@ nav{
 //-----------------------Home--------------------------//
 //-----------------------------------------------------//
 
+/*TODO:
+    - Less than 1400 make p smaller so text is readable
+    - Less than 810 make background larger and move to right
+*/
 main.home{
-    margin-top: 1em;
+    background: linear-gradient(to right, #fff 50%, transparent 80%), url("images/wandsworth.png") no-repeat;
+    background-position: right;
     width: calc(100% - 5rem);
+    height: 100%;
     display: flex;
     float: right;
     flex-flow: column wrap;
@@ -135,7 +145,7 @@ main.home{
         width: calc(100% - 16rem);
     }
     h1.main-title{
-        padding: 2rem 2rem 1rem;
+        padding: 3rem 2rem 1rem;
         font-size: 3.5rem;
     }
     h4.welcome-message{
@@ -144,6 +154,20 @@ main.home{
     }
     p.about-me{
         padding: 1rem 2rem;
+    }
+    .socials-container{
+        padding: 1rem 2rem;
+        width: 50%;
+        p{
+            padding-bottom: 10px;
+        }
+        a{
+            ion-icon{
+                font-size: 1.8rem;
+            }
+            color: #292929;
+            margin-right: 1.2rem;
+        }
     }
 }
 
@@ -175,7 +199,7 @@ main.project{
         overflow: hidden;
         border-radius: .5em;
         background-color: $background;
-        color: $white;
+        color: $offwhite;
         text-align: center;
         box-shadow: 0 17px 30px -10px $box-shadow;
         img{
@@ -214,7 +238,6 @@ main.project{
                 }
             }
         }
-
     }
 }
 
@@ -256,40 +279,46 @@ main.experience{
             min-width: 350px;
             margin: .5em .25em;
             padding: 1em;
-            border: 1px solid black;
+            background-color: $background;
+            color: $offwhite;
+            box-shadow: 0 17px 30px -10px $box-shadow;
+            border-radius: .5em;
             width: calc((100% - 18em) / 3);
         }
     }
     .skills-container{
-        display: flex;
-        flex-flow: column wrap;
-        div.skill-container{
-            margin: .5em .25em;
-            margin-left: 2.5em;
+        section{
+            width: calc(100% - 10rem);
             display: flex;
-            justify-content: stretch;
-            align-items: center;
-            width: 90%;
-            p{
-                width: 10rem;
-                margin-right: 1rem;
-            }
-            > span{
-                width: 10rem;
-                margin-left: 1rem;
-            }
-            .bar{
+            flex-flow: column wrap;
+            div.skill-container{
+                margin: .5em .25em;
+                margin-left: 2.5em;
                 display: flex;
-                background: $grey;
+                justify-content: stretch;
+                align-items: center;
                 width: 90%;
-                height: 10px;
-                border-radius: .5em;
-                overflow: hidden;
-                span{
-                    content: " ";
-                    width: 0;
-                    background-color: $accent;
-                    border-radius: .25em;
+                p{
+                    width: 10rem;
+                    margin-right: 1rem;
+                }
+                > span{
+                    width: 10rem;
+                    margin-left: 1rem;
+                }
+                .bar{
+                    display: flex;
+                    background: $grey;
+                    width: 90%;
+                    height: 10px;
+                    border-radius: .5em;
+                    overflow: hidden;
+                    span{
+                        content: " ";
+                        width: 0;
+                        background-color: $accent;
+                        border-radius: .25em;
+                    }
                 }
             }
         }
