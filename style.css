@@ -77,6 +77,14 @@ nav:hover {
   width: 15em;
 }
 
+nav:hover .small-logo {
+  display: none;
+}
+
+nav:hover ul li.navbar-logo .wide-logo {
+  display: block;
+}
+
 nav:hover ul li .navbar-inner .link-text {
   width: calc(100% - 4.5rem);
   opacity: 1;
@@ -93,6 +101,10 @@ nav ul li.navbar-logo {
   width: 100%;
   height: 5em;
   background-color: #000000;
+}
+
+nav ul li.navbar-logo .wide-logo {
+  display: none;
 }
 
 nav ul li.navbar-logo .navbar-inner:hover {
