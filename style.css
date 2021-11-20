@@ -184,6 +184,13 @@ main.home {
   transition: width 0.2s cubic-bezier(0.175, 0.685, 0.32, 1);
 }
 
+@media screen and (min-height: 1080px) {
+  main.home {
+    background: -webkit-gradient(linear, left top, right top, color-stop(50%, #fff), color-stop(80%, transparent)), url("images/wandsworth@2x.png") no-repeat;
+    background: linear-gradient(to right, #fff 50%, transparent 80%), url("images/wandsworth@2x.png") no-repeat;
+  }
+}
+
 main.home.shrink {
   width: calc(100% - 16rem);
 }
