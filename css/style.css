@@ -443,4 +443,236 @@ main.experience .skills-container section div.skill-container .bar span {
   background-color: #6622cc;
   border-radius: .25em;
 }
+
+main.research {
+  margin-top: .5em;
+  width: calc(100% - 5rem);
+  float: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-transition: width 0.2s cubic-bezier(0.175, 0.685, 0.32, 1);
+  transition: width 0.2s cubic-bezier(0.175, 0.685, 0.32, 1);
+}
+
+main.research.shrink {
+  width: calc(100% - 16rem);
+}
+
+main.research .research-container {
+  width: calc(100% - 6em);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+}
+
+main.research .research-container .research-item {
+  -webkit-box-shadow: 0 17px 30px -10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 17px 30px -10px rgba(0, 0, 0, 0.25);
+  background-color: #1f1f1f;
+  border-radius: .5em;
+  padding: 1em;
+  margin: 2em;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+}
+
+main.research .research-container .research-item > div {
+  color: #e8e8e8;
+}
+
+main.research .research-container .research-item > div h1 {
+  font-size: 1.6em;
+}
+
+main.research .research-container .research-item > div h5 {
+  color: #6622cc;
+}
+
+main.research .research-container .research-item .research-btn {
+  margin-left: auto;
+  color: gray;
+  min-width: 200px;
+  border-radius: .25em;
+  text-decoration: none;
+  -webkit-transition: all 0.2s cubic-bezier(0.175, 0.685, 0.32, 1);
+  transition: all 0.2s cubic-bezier(0.175, 0.685, 0.32, 1);
+}
+
+main.research .research-container .research-item .research-btn:hover {
+  background-color: #292929;
+  color: #ffffff;
+  -webkit-box-shadow: 0 17px 30px -10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 17px 30px -10px rgba(0, 0, 0, 0.25);
+}
+
+main.research .container {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(500px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  margin-right: 2em;
+}
+
+main.research .container .research-box {
+  margin: 2em;
+  width: calc(100% - 4em);
+  border-radius: .5em;
+  padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  min-height: 250px;
+  color: #e8e8e8;
+  background-color: #1f1f1f;
+}
+
+main.research .container h1 {
+  grid-column: 1 / -1;
+  font-size: 2em;
+  margin: 1em 1.7em 0.5em;
+}
+
+main.research .container .text-box p:not(:first-child) {
+  margin-top: .5em;
+}
+
+main.research .container .text-box code {
+  font-style: italic;
+  color: #6622cc;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+main.research .container .graph-box {
+  -webkit-box-orient: horizontal !important;
+  -webkit-box-direction: normal !important;
+      -ms-flex-flow: row nowrap !important;
+          flex-flow: row nowrap !important;
+}
+
+main.research .container .graph-box .desmos-graph {
+  border-radius: .5em;
+  border: 1px solid #1f1f1f;
+}
+
+main.research .container .graph-box p {
+  margin-left: 1em;
+}
+
+main.research .container .image-box {
+  -webkit-box-orient: horizontal !important;
+  -webkit-box-direction: normal !important;
+      -ms-flex-flow: row nowrap !important;
+          flex-flow: row nowrap !important;
+}
+
+main.research .container .image-box .img-container {
+  margin: 0 .5em;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  overflow: hidden;
+  border-radius: .5em;
+  text-align: center;
+  color: gray;
+  -webkit-transition: all 0.2s cubic-bezier(0.175, 0.685, 0.32, 1);
+  transition: all 0.2s cubic-bezier(0.175, 0.685, 0.32, 1);
+}
+
+main.research .container .image-box .img-container > div {
+  -o-object-fit: contain;
+     object-fit: contain;
+  overflow: hidden;
+}
+
+main.research .container .image-box .img-container > div img {
+  width: 100%;
+  -webkit-transition: all 0.2s cubic-bezier(0.175, 0.685, 0.32, 1);
+  transition: all 0.2s cubic-bezier(0.175, 0.685, 0.32, 1);
+}
+
+main.research .container .image-box .img-container > div img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+main.research .container .image-box .img-container.small-img {
+  min-width: 250px;
+}
+
+main.research .container .image-box .img-container.medium-img {
+  min-width: 380px;
+}
+
+main.research .container .image-box .img-container p {
+  margin-top: .5em;
+  padding: .5em;
+}
+
+main.research .container .image-box .img-container:hover {
+  color: #e8e8e8;
+  background-color: #292929;
+  -webkit-box-shadow: 0 17px 30px -10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 17px 30px -10px rgba(0, 0, 0, 0.25);
+}
+
+main.research .container .image-box p code {
+  font-style: italic;
+  color: #6622cc;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+main.research .container .code-box h3.code-title {
+  text-align: center;
+}
+
+main.research .container .code-box .cp_embed_iframe {
+  border: none;
+}
+
+main.research .container .container-2-1 {
+  grid-column: span 2;
+}
+
+main.research .container .container-1-1 {
+  grid-column: span 1;
+}
 /*# sourceMappingURL=style.css.map */

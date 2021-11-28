@@ -234,7 +234,7 @@ main.project{
             border-radius: .25em;
             color: $grey;
             background-color: $background;
-            transition: all .2s cubic-bezier(.175, .685, .32, 1); ;
+            transition: all .2s cubic-bezier(.175, .685, .32, 1);
             &:hover{
                 color: $white;
                 background-color: $background-2;
@@ -333,6 +333,170 @@ main.experience{
                     }
                 }
             }
+        }
+    }
+}
+
+//-----------------------------------------------------//
+//---------------------Research------------------------//
+//-----------------------------------------------------//
+
+main.research{
+    margin-top: .5em;
+    width: calc(100% - 5rem);
+    float: right;
+    display: flex;
+    flex: 1;
+    align-items: stretch;
+    flex-flow: row wrap;
+    transition: width .2s cubic-bezier(.175, .685, .32, 1);
+    &.shrink{
+        width: calc(100% - 16rem);
+    }
+    .research-container{
+        width: calc(100% - 6em);
+        display: flex;
+        justify-content: space-between;
+        flex-flow: column wrap;
+        .research-item{
+            box-shadow: 0 17px 30px -10px $box-shadow;
+            background-color: $background;
+            border-radius: .5em;
+            padding: 1em;
+            margin: 2em;
+            width: 100%;
+            display: flex;
+            flex-flow: row nowrap;
+            > div {
+                color: $offwhite;
+                h1{
+                    font-size: 1.6em;;
+                }
+                h5{
+                    color: $accent;
+                }
+            }
+            .research-btn{
+                margin-left: auto;
+                color: $grey;
+                min-width: 200px;
+                border-radius: .25em;
+                text-decoration: none;
+                transition: all .2s cubic-bezier(.175, .685, .32, 1);
+                &:hover{
+                    background-color: $background-2;
+                    color: $white;
+                    box-shadow: 0 17px 30px -10px $box-shadow;
+                }
+            }
+        }
+    }
+    .container{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+        justify-content: space-evenly;
+        flex-flow: row wrap;
+        margin-right: 2em;
+        .research-box{
+            margin: 2em;
+            width: calc(100% - 4em);
+            border-radius: .5em;
+            padding: 1em;
+            display: flex;
+            flex-flow: column nowrap;
+            min-height: 250px;
+            color: $offwhite;
+            background-color: $background;
+        }
+        h1{
+            grid-column: 1 / -1;
+            font-size: 2em;
+            margin:1em 1.7em 0.5em;
+        }
+        .text-box{
+            p:not(:first-child){
+                margin-top: .5em;
+            }
+            code{
+                font-style: italic;
+                color: $accent;
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
+        }
+        .graph-box{
+            flex-flow: row nowrap !important;
+            .desmos-graph{
+                border-radius: .5em;
+                border: 1px solid $background;
+            }
+            p{
+                margin-left: 1em;
+            }
+        }
+        .image-box{
+            flex-flow: row nowrap !important;
+            .img-container{
+                margin: 0 .5em;
+                flex-shrink: 1;
+                overflow: hidden;
+                border-radius: .5em;
+                text-align: center;
+                color: $grey;
+                transition: all .2s cubic-bezier(.175, .685, .32, 1);
+                > div{
+                    object-fit: contain;
+                    overflow: hidden;
+                    img{
+                        width:100%;
+                        transition: all .2s cubic-bezier(.175, .685, .32, 1);
+                        &:hover{
+                            transform: scale(1.2);
+                        }
+                    }
+                }
+                &.small-img{
+                    min-width:250px;
+                }
+                &.medium-img{
+                    min-width:380px;
+                }
+                p{
+                    margin-top: .5em;
+                    padding: .5em;
+                }
+                &:hover{
+                    color: $offwhite;
+                    background-color: $background-2;
+                    box-shadow: 0 17px 30px -10px $box-shadow;
+                }
+    
+            }
+            p{
+                code{
+                    font-style: italic;
+                    color: $accent;
+                    display: block;
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        }
+        .code-box{
+            h3.code-title{
+                text-align: center;
+            }
+            .cp_embed_iframe{
+                border: none;
+            }
+        }
+        .container-2-1{
+            grid-column: span 2;
+        }
+        .container-1-1{
+            grid-column: span 1;
         }
     }
 }

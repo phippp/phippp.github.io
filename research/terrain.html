@@ -1,0 +1,215 @@
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
+<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#dcdcdc">
+<meta charset="UTF-8">
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="/js/navbar.js"></script>
+<title>Phillip Navarrete | Terrain</title>
+
+<nav id="navbar">
+    <ul class="navbar-items flexbox-col">
+        <li class="navbar-logo flexbox-left">
+            <a class="navbar-inner flexbox">
+                <img class="small-logo" src="/images/logo/logo-short-white.png">
+                <img class="wide-logo" src="/images/logo/logo-wide-white.png">
+            </a>
+        </li>
+        <li class="navbar-item flexbox-left">
+            <a class="navbar-inner flexbox-left" href="/">
+                <div class="navbar-item-inner-icon-wrapper flexbox">
+                    <ion-icon name="home-outline"></ion-icon>
+                </div>
+                <span class="link-text">Home</span>
+            </a>
+        </li>
+        <li class="navbar-item flexbox-left">
+            <a class="navbar-inner flexbox-left" href="/projects">
+                <div class="navbar-item-inner-icon-wrapper flexbox">
+                    <ion-icon name="folder-open-outline"></ion-icon>
+                </div>
+                <span class="link-text">Projects</span>
+            </a>
+        </li>
+        <li class="navbar-item flexbox-left">
+            <a class="navbar-inner flexbox-left" href="/experience">
+                <div class="navbar-item-inner-icon-wrapper flexbox">
+                    <ion-icon name="person-outline"></ion-icon>
+                </div>
+                <span class="link-text">Experience</span>
+            </a>
+        </li>
+        <li class="navbar-item flexbox-left">
+            <a class="navbar-inner flexbox-left" href="/research">
+                <div class="navbar-item-inner-icon-wrapper flexbox">
+                    <ion-icon name="flask-outline"></ion-icon>
+                </div>
+                <span class="link-text">Research</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+<main class="research terrain">
+    <section class="container">
+        <h1>Terrain...</h1>
+        <!-- Intro -->
+        <section class="research-box text-box container-1-1">
+            <p>
+                I have always been fascinated with terrain generation from the moment that I first played Minecraft.</br>
+                Yet somwhow it always seemed like it would be impossible to create myself. But alas, here we are... I decided to look into terrain generation
+                and see just how <em>hard</em> it would be to create?
+            </p>
+            <p>
+                This simple answer is, not very.<br/>
+                There are an abundance of tutorials and documentation on exisiting libraries that make it really simple to see how to make a terrain generator.
+                Here I will show some things that I learned whilst researching this and some code that I wrote also.
+            </p>
+        </section>
+        <!-- Basics -->
+        <section class="research-box image-box container-2-1">
+            <div>
+                <p>
+                    Terrain is typically generated via the use of a noise function. A noise function works by having a n-dimensional array of floats.
+                </p>
+                <p>
+                    Here I will show how we can create a simple noise function for a 1-Dimensional array. <small><i>To keep things simple we only have 10 points.</i></small><br/>
+                    <abbr title="let min = floor(x); return array[min] * (x - min) + array[min + 1] * (1 - (x - min));">Linear interpolation</abbr> can give us any value along 
+                    the line, however these values arent really useful currently as they create very sharp lines that aren't natural.
+                </p>
+            </div>
+            <div class="img-container small-img">
+                <div>           
+                    <img src="/images/graph-1.png" alt="A one dimensional array of floats">
+                </div> 
+                <p>Fig 1. shows the representation of a 1-Dimensional array of floats.</p>
+            </div>
+            <div>
+                <p>
+                    To make the values more useful we want to smooth the line. This can be done using applying cosine to the result of <i>(x - min)</i> like:
+                    <code>(1 - cos(t)) * 0.5;</code>
+                    However, it is quicker to approximate this as:
+                    <code>t * t * (3 - 2 * t)</code>
+                </p>
+            </div>
+            <div class="img-container small-img">
+                <div>           
+                    <img src="/images/graph-2.png" alt="A one dimensional array of floats">
+                </div> 
+                <p>Fig 2. shows the same array when you apply smoothStep function.</p>
+            </div>
+        </section>
+        <!-- CodePen 1 -->
+        <section class="research-box code-box container-1-1">
+            <h3 class="code-title">Terrain using built in noise function.</h3>
+            <p class="codepen" data-height="300" data-theme-id="dark" data-default-tab="result" data-slug-hash="mdBbEag" data-preview="true" data-user="phippp-the-lessful" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                <span>See the Pen <a href="https://codepen.io/phippp-the-lessful/pen/mdBbEag">
+                Terrain 1</a> by Phillip Navarrete (<a href="https://codepen.io/phippp-the-lessful">@phippp-the-lessful</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+        </section>
+        <!-- Smooth Functions -->
+        <section class="research-box text-box container-1-1">
+            <p>
+                When I was originally creating the code for these mini terrain generators I was using smoothStep as a method to smooth out values to give it
+                a more natural feel.
+            </p>
+            <p>
+                It wasn't until I listened to a <abbr title="Game Developers Confrence">GDC</abbr> video about terrain generation that I realised
+                that interesting features can be created by maping the result by another function. The functions I tried were:
+                <ul>
+                    <li><b>Smooth Start</b> - squares any values so that lower values become more common.</li>
+                    <li><b>Smooth Stop</b> - square roots any values so that higher values become more common.</li>
+                    <li><b>Absolute Value</b> - calculates <abbr title="Math.abs(2 * x - 1)">|2x -1|</abbr> which is useful for making rivers go through land</li>
+                </ul>
+            </p>
+        </section>
+        <!-- Smooth Functions Graph -->
+        <section class="research-box graph-box container-1-1">
+            <iframe src="https://www.desmos.com/calculator/npqa0vmtzu?embed" width="300" height="100%" class="desmos-graph" frameborder=0></iframe>
+            <p>
+                This graph shows the impact that we get from applying the other functions after creating the noise value.<br/>
+                Green shows smoothStop.<br/>
+                Red shows smoothStep.<br/>
+                Blue shows smoothStart.<br/>
+                Purple shows absoluteValue.<br/>
+            </p>
+        </section>
+        <!-- Octaves -->
+        <section class="research-box image-box container-2-1">
+            <div>
+                <p>
+                    The thing that made the most difference was generating multiple octaves of noise and summing them to distort the values.
+                    To do this, we start with a base layer of noise with normal frequency and amplitude. Then we add multiple layers <code>for(let i = 1; i < 5; i++)...</code> onto the base noise
+                    but multiplying the co-ordinates supplied by <i>2<sup>i</sup></i> and dividing the result by <i>2<sup>i</sup></i> also.
+                </p>
+            </div>
+            <div class="img-container medium-img">
+                <div>           
+                    <img src="/images/noise-1.png" alt="Example of multiple octaves">
+                </div> 
+                <p>Fig 3. shows 6 octaves of noise. <a href="http://adrianb.io/2014/08/09/perlinnoise.html" target=_blank>Image can be found here.</a></p>
+            </div>
+            <div>
+                <p>
+                    Once you have combined enough octaves, 4 or 5 are usually enough to see a significant impact, the terrain will have a lot more jitter
+                    creating new features.
+                </p>
+            </div>
+            <div class="img-container small-img">
+                <div>           
+                    <img src="/images/noise-2.png" alt="Example of multiple octaves">
+                </div> 
+                <p>Fig 4. shows the sum of the 6 octaves of noise in Fig 3. <a href="http://adrianb.io/2014/08/09/perlinnoise.html" target=_blank>Image can be found here.</a></p>
+            </div>
+        </section>
+        <!-- CodePen 2 -->
+        <section class="research-box code-box container-1-1">
+            <h3 class="code-title">Terrain using multiple smoothing functions.</h3>
+            <p class="codepen" data-height="300" data-theme-id="dark" data-default-tab="result" data-slug-hash="KKXPgVW" data-preview="true" data-user="phippp-the-lessful" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                <span>See the Pen <a href="https://codepen.io/phippp-the-lessful/pen/KKXPgVW">
+                Custom Noise Function</a> by Phillip Navarrete (<a href="https://codepen.io/phippp-the-lessful">@phippp-the-lessful</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+              </p>
+              <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+        </section>
+        <!-- CodePen 3 -->
+        <section class="research-box code-box container-1-1">
+            <h3 class="code-title">Minecraft style rendering of terrain.</h3>
+            <p class="codepen" data-height="300" data-theme-id="dark" data-default-tab="result" data-slug-hash="KKXPMjN" data-preview="true" data-user="phippp-the-lessful" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                <span>See the Pen <a href="https://codepen.io/phippp-the-lessful/pen/KKXPMjN">
+                Terrain 3</a> by Phillip Navarrete (<a href="https://codepen.io/phippp-the-lessful">@phippp-the-lessful</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+              </p>
+              <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+        </section>
+        <!-- Going 2d -->
+        <section class="research-box text-box container-1-1">
+            <p>
+                So far everything has been shown using 1-Dimensional arrays, however for terrain we want at least 2-Dimensional 
+                <small>(Assuming we are only considering height and not trying to create caves).</small> However we can simply modify our code to handle 2D.
+            </p>
+            <p>
+                We now have to consider the 4 closest points to (x, y). I will name them a00, a10, a01, and a11 where: 
+                <code>a00 is the value at point (floor(x), floor(y),<br/>and a11 is the value at point(floor(x) + 1, floor(y) + 1)</code>
+            </p>
+            <p>
+                To calculate the overall <abbr title="Linear interpolation">lerp</abbr> we want to calculate the lerp of each line in the x direction.
+                We then can calculate the lerp of the two values we calculated. This looks like:
+                <code>lerp( lerp(a00, a10, x - floor(x)),<br/>lerp(a01, a11, x- floor(x)),<br/> y - floor(y))</code>
+            </p>
+        </section>
+    </section>
+</main>
+<!-- To compile the scss run: -->
+<!-- sass <filename.scss> <filename.css> -->

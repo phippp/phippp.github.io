@@ -1,8 +1,8 @@
-<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-<link rel="manifest" href="favicon/site.webmanifest">
-<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
+<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#dcdcdc">
 <meta charset="UTF-8">
@@ -14,14 +14,14 @@
 <link rel="stylesheet" href="/css/style.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="/js/navbar.js"></script>
-<title>Phillip Navarrete | Home</title>
+<title>Phillip Navarrete | Research</title>
 
 <nav id="navbar">
     <ul class="navbar-items flexbox-col">
         <li class="navbar-logo flexbox-left">
             <a class="navbar-inner flexbox">
-                <img class="small-logo" src="images/logo/logo-short-white.png">
-                <img class="wide-logo" src="images/logo/logo-wide-white.png">
+                <img class="small-logo" src="/images/logo/logo-short-white.png">
+                <img class="wide-logo" src="/images/logo/logo-wide-white.png">
             </a>
         </li>
         <li class="navbar-item flexbox-left">
@@ -33,7 +33,7 @@
             </a>
         </li>
         <li class="navbar-item flexbox-left">
-            <a class="navbar-inner flexbox-left" href="projects">
+            <a class="navbar-inner flexbox-left" href="/projects">
                 <div class="navbar-item-inner-icon-wrapper flexbox">
                     <ion-icon name="folder-open-outline"></ion-icon>
                 </div>
@@ -41,7 +41,7 @@
             </a>
         </li>
         <li class="navbar-item flexbox-left">
-            <a class="navbar-inner flexbox-left" href="experience">
+            <a class="navbar-inner flexbox-left" href="/experience">
                 <div class="navbar-item-inner-icon-wrapper flexbox">
                     <ion-icon name="person-outline"></ion-icon>
                 </div>
@@ -49,7 +49,7 @@
             </a>
         </li>
         <li class="navbar-item flexbox-left">
-            <a class="navbar-inner flexbox-left" href="research">
+            <a class="navbar-inner flexbox-left" href="/research">
                 <div class="navbar-item-inner-icon-wrapper flexbox">
                     <ion-icon name="flask-outline"></ion-icon>
                 </div>
@@ -59,16 +59,21 @@
     </ul>
 </nav>
 
-<main class="home">
-    <h1 class="main-title">Phillip Navarrete</h1>
-    <h4 class="welcome-message">Hello, welcome to my portfolio...</h4>
-    <p class="about-me">I am a 3rd year University Student curerntly taking a year academic placement to develop industry skills.<br/>I am studying Computer Science at Loughborough Uni currently with a <abbr title="First Class Honours">1:1</abbr>.</p>
-    <div class="socials-container">
-        <p>You can visit me at any of the following:</p>
-        <a href="https://github.com/Phippp"><ion-icon name="logo-github"></ion-icon></a>
-        <a href="https://discordapp.com/users/243031735082811393"><ion-icon name="logo-discord"></ion-icon></a>
-        <a href="mailto:phillipvictor2000@gmail.com"><ion-icon name="mail"></ion-icon></a>
-    </div>
+<main class="research">
+    <section class="research-container">
+        <section class="research-item">
+            <div>
+                <h1>Terrain</h1>
+                <h5><time datetime="2021-11-28">28th Nov. 2021</time></h5>
+                <p>Here I take a look at how terrain is generated and how to make your own noise function.</p>
+            </div>
+            <a class="research-btn flexbox" href="/research/terrain">
+                <span class="btn-text">
+                    Go to ...
+                </span>
+            </a>
+        </section>
+    </section>
 </main>
 <!-- To compile the scss run: -->
 <!-- sass <filename.scss> <filename.css> -->
