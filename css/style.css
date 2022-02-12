@@ -603,6 +603,11 @@ main.research .container .image-box {
           flex-flow: row nowrap !important;
 }
 
+main.research .container .image-box div:not(.img-container) + div:not(.img-container) {
+  border-left: 1px gray groove;
+  padding-left: 6px;
+}
+
 main.research .container .image-box .img-container {
   margin: 0 .5em;
   -ms-flex-negative: 1;
@@ -674,5 +679,26 @@ main.research .container .container-2-1 {
 
 main.research .container .container-1-1 {
   grid-column: span 1;
+}
+
+main.research span.box {
+  content: ' ';
+  -webkit-transform: translateY(15%);
+          transform: translateY(15%);
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+}
+
+main.research span.box.red {
+  background-color: #f00;
+}
+
+main.research span.box.blue {
+  background-color: #00f;
+}
+
+main.research span.box.purple {
+  background-color: #6622cc;
 }
 /*# sourceMappingURL=style.css.map */

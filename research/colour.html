@@ -1,0 +1,148 @@
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
+<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#dcdcdc">
+<meta charset="UTF-8">
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="/js/navbar.js"></script>
+<title>Phillip Navarrete | Colour</title>
+
+<nav id="navbar">
+    <ul class="navbar-items flexbox-col">
+        <li class="navbar-logo flexbox-left">
+            <a class="navbar-inner flexbox">
+                <img class="small-logo" src="/images/logo/logo-short-white.png">
+                <img class="wide-logo" src="/images/logo/logo-wide-white.png">
+            </a>
+        </li>
+        <li class="navbar-item flexbox-left">
+            <a class="navbar-inner flexbox-left" href="/">
+                <div class="navbar-item-inner-icon-wrapper flexbox">
+                    <ion-icon name="home-outline"></ion-icon>
+                </div>
+                <span class="link-text">Home</span>
+            </a>
+        </li>
+        <li class="navbar-item flexbox-left">
+            <a class="navbar-inner flexbox-left" href="/projects">
+                <div class="navbar-item-inner-icon-wrapper flexbox">
+                    <ion-icon name="folder-open-outline"></ion-icon>
+                </div>
+                <span class="link-text">Projects</span>
+            </a>
+        </li>
+        <li class="navbar-item flexbox-left">
+            <a class="navbar-inner flexbox-left" href="/experience">
+                <div class="navbar-item-inner-icon-wrapper flexbox">
+                    <ion-icon name="person-outline"></ion-icon>
+                </div>
+                <span class="link-text">Experience</span>
+            </a>
+        </li>
+        <li class="navbar-item flexbox-left">
+            <a class="navbar-inner flexbox-left" href="/research">
+                <div class="navbar-item-inner-icon-wrapper flexbox">
+                    <ion-icon name="flask-outline"></ion-icon>
+                </div>
+                <span class="link-text">Research</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+<main class="research terrain">
+    <section class="container">
+        <h1>Colour Theory...</h1>
+        <!-- Intro -->
+        <section class="research-box text-box container-1-1">
+            <p>
+                For a long time I have been working on 'front end' projects where typically the design was defined by a default theme (either company or Bootsrap). 
+                I hadnt really had to worry about what colours work well together, so I took some time looking at colours and how they work both computationally and visibly and here are my notes on what I found.
+            </p>
+            <p>
+                I will start with an introduction to some colour methods and colour spaces.
+            </p>
+        </section>
+        <!-- Additive and subtractive -->
+        <section class="research-box image-box container-2-1">
+            <div>
+                <h4>Additive</h4>
+                <p>
+                    RGB is an example of an additive colour model, this represents how we expect light to work.
+                    Without the presence of any colour we have black, and when we have all colours present we get white.
+                </p>
+            </div>
+            <div class="img-container small-img">
+                <div>           
+                    <img src="/images/rgb.jpg" alt="Additive Colour Model">
+                </div> 
+                <p>Fig 1. shows an example of an additive colour model.</p>
+            </div>
+            <div>
+                <h4>Subtractive</h4>
+                <p>
+                    RYB in contrast to RGB is a subtractive colour model, this means that we start with white and to get to black you have to have all colour present.
+                    This is less obvious in how it works but it is the underlying principal in printers.
+                </p>
+            </div>
+            <div class="img-container small-img">
+                <div>           
+                    <img src="/images/ryb.png" alt="Subtractive Colour Model">
+                </div> 
+                <p>Fig 2. shows an example of a subtractive colour model.</p>
+            </div>
+        </section>
+        <!-- Colour Wheel -->
+        <section class="research-box image-box container-1-1">
+            <div>
+                <p>
+                    Whilst RGB is a good colour scheme for describing a colour, it's not the most practical when it comes to calculations.
+                    Whilst calculating a colours complement is easily achievable in RGB:
+                    <code>RGB<sub>new</sub> = rgb(255 - R, 255 - G, 255 - B)</code>
+                    Calculating something like the Split Complement is much harder and leads to complex calculations.
+                </p>
+            </div>
+            <div class="img-container small-img">
+                <div>           
+                    <img src="/images/colour-wheel.png" alt="Colour Wheel">
+                </div> 
+                <p>Fig 3. shows a basic RGB colour wheel.</p>
+            </div>
+        </section>
+        <!-- Harmonies -->
+        <section class="research-box image-box container-1-1">
+            <div>
+                <!-- <h4>Colour Harmonies</h4> -->
+                <p>
+                    Colour harmonies are groups of colours that are based on geometric relations in the colour wheel.
+                    The resulting colour groups are typically eye-pleasing. This is something that get considered often when it comes to website/logo design and marketing.
+                </p>
+            </div>
+            <div class="img-container small-img">
+                <div>           
+                    <img src="/images/colour-harmony.jpg" alt="Colour Harmonies">
+                </div> 
+                <p>Fig 4. shows a selection of common harmonies on a RYB colour wheel.</p>
+            </div>
+        </section>
+        <!-- CodePen 1 -->
+        <section class="research-box code-box container-1-1">
+            <h3 class="code-title">Interactive harmony calculator</h3>
+            <p class="codepen" data-height="300" data-theme-id="dark" data-default-tab="result" data-slug-hash="NWwvKxv" data-preview="true" data-user="phippp-the-lessful" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                <span>See the Pen <a href="https://codepen.io/phippp-the-lessful/pen/NWwvKxv">
+                Colour Table</a> by Phillip Navarrete (<a href="https://codepen.io/phippp-the-lessful">@phippp-the-lessful</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+        </section>
+    </section>
+</main>

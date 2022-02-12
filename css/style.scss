@@ -438,6 +438,10 @@ main.research{
         }
         .image-box{
             flex-flow: row nowrap !important;
+            div:not(.img-container) + div:not(.img-container){
+                border-left: 1px $grey groove;
+                padding-left: 6px;
+            }
             .img-container{
                 margin: 0 .5em;
                 flex-shrink: 1;
@@ -497,6 +501,22 @@ main.research{
         }
         .container-1-1{
             grid-column: span 1;
+        }
+    }
+    span.box{
+        content: ' ';
+        transform: translateY(15%);
+        width: 1em;
+        height: 1em;
+        display: inline-block;
+        &.red{
+            background-color: #f00;
+        }
+        &.blue{
+            background-color: #00f;
+        }
+        &.purple{
+            background-color: $accent;
         }
     }
 }
