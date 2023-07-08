@@ -142,8 +142,9 @@ nav{
     - Less than 810 make background larger and move to right
 */
 main.home{
-    background: linear-gradient(to right, #fff 50%, transparent 80%), url("/images/wandsworth.png") no-repeat;
+    background: linear-gradient(to right, #fff 50%, transparent 90%), url("/images/wandsworth.png") no-repeat;
     background-position: right;
+    background-size: cover;
     width: calc(100% - 5rem);
     height: 100%;
     display: flex;
@@ -151,7 +152,7 @@ main.home{
     flex-flow: column wrap;
     transition: width .2s cubic-bezier(.175, .685, .32, 1);
     @media screen and (min-height: 1080px){
-        background: linear-gradient(to right, #fff 50%, transparent 80%), url("/images/wandsworth@2x.png") no-repeat;
+        background: linear-gradient(to right, #fff 50%, transparent 90%), url("/images/wandsworth@2x.png") no-repeat;
     }
     &.shrink{
         width: calc(100% - 16rem);
