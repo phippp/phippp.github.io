@@ -1,523 +1,155 @@
-$background: #1f1f1f;
-$background-2: #292929;
-$white: #ffffff;
-$white-2: rgba(255,255,255,0.8);
-$white-3: rgba(255,255,255,0.5);
-$offwhite: #e8e8e8;
-$grey: rgb(128, 128, 128);
-$black: #000000;
-$box-shadow: rgba(0,0,0,.25);
-$accent: #6622cc;
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Source+Code+Pro:wght@200;300;400;500;600;700;800;900&display=swap");
+
+$offwhite: rgb(232, 232, 232);
+
+$shadow-15: rgba(0 0 0 / 15%);
+$shadow-40: rgba(0 0 0 / 40%);
+$shadow-80: rgba(0 0 0 / 80%);
+
+$accent-950: #431407;
+$accent-900: #7c2d12;
+$accent-800: #9a3412;
+$accent-700: #c2410c;
+$accent-600: #ea580c;
+$accent-500: #f97316;
+$accent-400: #fb923c;
+$accent-300: #fdba74;
+$accent-200: #fed7aa;
+$accent-100: #ffedd5;
+$accent-50:  #fff7ed;
+
+$background-950: #0a0a0a;
+$background-900: #171717;
+$background-800: #262626;
+$background-700: #404040;
+$background-600: #525252;
+$background-500: #737373;
+$background-400: #a3a3a3;
+$background-300: #d4d4d4;
+$background-200: #e5e5e5;
+$background-100: #f5f5f5;
+$background-50:  #fafafa;
+
+$background-800-45: rgba(38 38 38 /45%);
+
+// Define default styles for each DOM type
 
 *{
-    margin:0;
-    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+    font-family: "Source Code Pro", monospace;
 }
 
-//-----------------------------------------------------//
-//----------------------Nav-Bar------------------------//
-//-----------------------------------------------------//
-
-/*TODO:
-    - Less than 810 make navbar go up top and show text by default
-*/
-.flexbox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.flexbox-left {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-.flexbox-col {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-
-nav{
-    z-index: 10;
-    position:fixed;
-    top:0;
-    left:0;
-    background: $background;
-    height: 100%;
-    width:5em;
-    transition: width .25s cubic-bezier(.175, .685, .32, 1) ;
+body{
+    background-color: $background-800;
     overflow-x: hidden;
-    overflow-y: auto;
-    &::-webkit-scrollbar-track{
-        background-color: $background;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+h1 {
+    font-size: 2.5rem;
+    line-height: 3.125rem;
+    letter-spacing: -0.125rem;
+    font-weight: 400;
+    color: #fefefe;
+}
+
+h2 {
+    font-size: 2rem;
+    line-height: 2.75rem;
+    font-weight: 400;
+    color: #fefefe;
+}
+
+h4 {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #fefefe;
+}
+
+h6 {
+    font-weight: 700;
+    font-size: 0.75rem;
+    color: #fefefe;
+}
+
+p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #fefefe;
+    margin: 1rem 0 1.25rem 0;
+}
+
+// Define class based definitions that are common
+
+.w-50{
+    width: 50%;
+}
+
+.fixed{
+    position: relative;
+}
+
+.constrainer{
+    display: flex;
+    max-width: max(80vw, 900px);
+    margin: 1.5rem auto;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+
+    &.col-2 > * {
+        flex-basis: 50%;
     }
-    &::-webkit-scrollbar{
-        width: .5rem;
-        background-color: $background;
-    }
-    &::-webkit-scrollbar-thumb{
-        background-color: aqua;
-    }
+}
+
+.badge{
+    padding: 0.375rem  0.675rem;
+    margin: 0 1.25rem 0 0;
+    color: $offwhite;
+    background-color: $background-700;   
+    font-size: 0.875rem;
+    font-weight: 100;
+    border-radius: 0.25rem;
+    align-items: center;
+    text-align: center;
+    transition: all 0.25s ease;
+    cursor: pointer;
+
     &:hover{
-        width:15em;
-        .small-logo{
-            display: none;
-        }
-        ul li.navbar-logo .wide-logo{
-            display: block;
-        }
-        ul li .navbar-inner .link-text{
-            width: calc(100% - 4.5rem);
-            opacity: 1;
-        }
-    }
-    ul{
-        margin: 0;
-        padding: 0;
-        list-style-type: none;
-        li{
-            &.navbar-logo{
-                margin: 0 0 2em 0;
-                width: 100%;
-                height: 5em;
-                background-color: $black;
-                .wide-logo{
-                    display: none;
-                }
-                .navbar-inner:hover{
-                    box-shadow: 0 17px 30px -10px $box-shadow;
-                }
-                img{
-                    height: 3em;
-                }
-            }
-            &.navbar-item{
-                padding: 0 .5em;
-                width: 100%;
-                cursor: pointer;
-            }
-            .navbar-inner{
-                color: $grey;
-                padding: 1em 0;
-                margin: 0 .5em;
-                width: 100%;
-                position: relative;
-                border-radius: .25em;
-                text-decoration: none;
-                transition: all .2s cubic-bezier(.175, .685, .32, 1);
-                &.flexbox-left:hover{
-                    color: $white;
-                    background-color: $background-2;
-                    box-shadow: 0 17px 30px -10px $box-shadow;
-                }
-                .navbar-item-inner-icon-wrapper{
-                    width: calc(4.5rem - 1em);
-                    position: relative;
-                    ion-icon{
-                        position: absolute;
-                        font-size: 1.4rem;
-                    }
-                }
-                .link-text{
-                    margin: 0;
-                    width: 0;
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
-                    transition: all .35s cubic-bezier(.175, .685, .32, 1);
-                    overflow: hidden;
-                    opacity: 0;
-                }
-            }
-        }
+        background-color: $background-600;
+        font-weight: 500;
     }
 }
 
-//-----------------------------------------------------//
-//-----------------------Home--------------------------//
-//-----------------------------------------------------//
+.badge-sm{
+    font-size: 0.75rem;
+    margin: 0 0.25rem;
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+    max-height: 1.5rem;
+}
 
-/*TODO:
-    - Less than 1400 make p smaller so text is readable
-    - Less than 810 make background larger and move to right
-*/
-main.home{
-    background: linear-gradient(to right, #fff 50%, transparent 90%), url("/images/wandsworth.png") no-repeat;
-    background-position: right;
-    background-size: cover;
-    width: calc(100% - 5rem);
-    height: 100%;
-    display: flex;
-    float: right;
-    flex-flow: column wrap;
-    transition: width .2s cubic-bezier(.175, .685, .32, 1);
-    @media screen and (min-height: 1080px){
-        background: linear-gradient(to right, #fff 50%, transparent 90%), url("/images/wandsworth@2x.png") no-repeat;
-    }
-    &.shrink{
-        width: calc(100% - 16rem);
-    }
-    h1.main-title{
-        padding: 3rem 2rem 1rem;
-        font-size: 3.5rem;
-    }
-    h4.welcome-message{
-        color: $accent;
-        padding: 1rem 2rem; 
-    }
-    p.about-me{
-        padding: 1rem 2rem;
-    }
-    .socials-container{
-        padding: 1rem 2rem;
-        width: 50%;
-        p{
-            padding-bottom: 10px;
-        }
-        a{
-            ion-icon{
-                font-size: 1.8rem;
-            }
-            color: #292929;
-            margin-right: 1.2rem;
-        }
+.badge-accent{
+    font-weight: 600;
+    background-color: $accent-300;
+    color: $background-700;
+    transition: all 0.25s ease;
+
+    &:hover{
+        background-color: $accent-400;
+        font-weight: 900;
     }
 }
 
-//-----------------------------------------------------//
-//---------------------Project-------------------------//
-//-----------------------------------------------------//
-
-main.project{
-    margin-top: .5em;
-    width: calc(100% - 5rem);
-    float: right;
-    display: flex;
-    justify-content: space-evenly;
-    flex: 1;
-    align-items: stretch;
-    flex-flow: row wrap;
-    transition: width .2s cubic-bezier(.175, .685, .32, 1);
-    &.shrink{
-        width: calc(100% - 16rem);
-    }
-    .project-container{
-        margin: .5em .25em;
-        min-height:450px;
-        width:calc((100% - 20em)/4);
-        min-width: 300px;
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: space-between;
-        overflow: hidden;
-        border-radius: .5em;
-        background-color: $background;
-        color: $offwhite;
-        text-align: center;
-        box-shadow: 0 17px 30px -10px $box-shadow;
-        img{
-            height:150px;
-            width:100%;
-            object-fit: cover;
-            box-shadow: 0 17px 30px -10px $box-shadow;
-        }
-        h3{
-            padding: .5rem .1rem;
-            font-size: 2em;
-        }
-        p{
-            padding: 0 1em;
-        }
-        .project-code-btn{
-            text-decoration: none;
-            padding: 1em;
-            margin:1em;
-            border-radius: .25em;
-            color: $grey;
-            background-color: $background;
-            transition: all .2s cubic-bezier(.175, .685, .32, 1);
-            &:hover{
-                color: $white;
-                background-color: $background-2;
-                box-shadow: 0 17px 30px -10px $box-shadow;
-            }
-            .icon-wrapper{
-                width: calc(4.5rem - 1em);
-                position: relative;
-                margin-left: -1.25em;
-                ion-icon{
-                    position: absolute;
-                    font-size: 1.4rem;
-                }
-            }
-        }
-    }
-}
-
-//-----------------------------------------------------//
-//--------------------Experience-----------------------//
-//-----------------------------------------------------//
-
-main.experience{
-    margin-top: .5em;
-    margin-bottom: 5rem;
-    width: calc(100% - 5rem);
-    float: right;
-    flex-flow: column wrap;
-    display: flex;
-    transition: width .2s cubic-bezier(.175, .685, .32, 1);
-    &.shrink{
-        width: calc(100% - 16rem);
-    }
-    .container{
-        width: 100%;
-        display: flex;
-        justify-content: space-evenly;
-        flex-flow: row wrap;
-        h2{
-            width: calc(100% - 3.4em);
-            margin:1em 1.7em 0.5em;
-        }
-        section{
-            h4{
-                color: $grey;
-            }
-            h5{
-                color: $accent;
-            }
-            text-align: center ;
-            &:first-of-type{
-                margin-left:0;
-            }
-            min-width: 350px;
-            margin: .5em .25em;
-            padding: 1em;
-            background-color: $background;
-            color: $offwhite;
-            box-shadow: 0 17px 30px -10px $box-shadow;
-            border-radius: .5em;
-            width: calc((100% - 18em) / 3);
-        }
-    }
-    .skills-container{
-        section{
-            width: calc(100% - 10rem);
-            display: flex;
-            flex-flow: column wrap;
-            div.skill-container{
-                margin: .5em .25em;
-                margin-left: 2.5em;
-                display: flex;
-                justify-content: stretch;
-                align-items: center;
-                width: 90%;
-                p{
-                    width: 10rem;
-                    margin-right: 1rem;
-                }
-                > span{
-                    width: 10rem;
-                    margin-left: 1rem;
-                }
-                .bar{
-                    display: flex;
-                    background: $grey;
-                    width: 90%;
-                    height: 10px;
-                    border-radius: .5em;
-                    overflow: hidden;
-                    span{
-                        content: " ";
-                        width: 0;
-                        background-color: $accent;
-                        border-radius: .25em;
-                    }
-                }
-            }
-        }
-    }
-}
-
-//-----------------------------------------------------//
-//---------------------Research------------------------//
-//-----------------------------------------------------//
-
-main.research{
-    margin-top: .5em;
-    width: calc(100% - 5rem);
-    float: right;
-    display: flex;
-    flex: 1;
-    align-items: stretch;
-    flex-flow: row wrap;
-    transition: width .2s cubic-bezier(.175, .685, .32, 1);
-    &.shrink{
-        width: calc(100% - 16rem);
-    }
-    .research-container{
-        width: calc(100% - 6em);
-        display: flex;
-        justify-content: space-between;
-        flex-flow: column wrap;
-        .research-item{
-            box-shadow: 0 17px 30px -10px $box-shadow;
-            background-color: $background;
-            border-radius: .5em;
-            padding: 1em;
-            margin: 2em;
-            width: 100%;
-            display: flex;
-            flex-flow: row nowrap;
-            > div {
-                color: $offwhite;
-                h1{
-                    font-size: 1.6em;;
-                }
-                h5{
-                    color: $accent;
-                }
-            }
-            .research-btn{
-                margin-left: auto;
-                color: $grey;
-                min-width: 200px;
-                border-radius: .25em;
-                text-decoration: none;
-                transition: all .2s cubic-bezier(.175, .685, .32, 1);
-                &:hover{
-                    background-color: $background-2;
-                    color: $white;
-                    box-shadow: 0 17px 30px -10px $box-shadow;
-                }
-            }
-        }
-    }
-    .container{
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-        justify-content: space-evenly;
-        flex-flow: row wrap;
-        margin-right: 2em;
-        .research-box{
-            margin: 2em;
-            width: calc(100% - 4em);
-            border-radius: .5em;
-            padding: 1em;
-            display: flex;
-            flex-flow: column nowrap;
-            min-height: 250px;
-            color: $offwhite;
-            background-color: $background;
-        }
-        h1{
-            grid-column: 1 / -1;
-            font-size: 2em;
-            margin:1em 1.7em 0.5em;
-        }
-        .text-box{
-            p:not(:first-child){
-                margin-top: .5em;
-            }
-            code{
-                font-style: italic;
-                color: $accent;
-                display: block;
-                width: 100%;
-                text-align: center;
-            }
-        }
-        .graph-box{
-            flex-flow: row nowrap !important;
-            .desmos-graph{
-                border-radius: .5em;
-                border: 1px solid $background;
-            }
-            p{
-                margin-left: 1em;
-            }
-        }
-        .image-box{
-            flex-flow: row nowrap !important;
-            div:not(.img-container) + div:not(.img-container){
-                border-left: 1px $grey groove;
-                padding-left: 6px;
-            }
-            .img-container{
-                margin: 0 .5em;
-                flex-shrink: 1;
-                overflow: hidden;
-                border-radius: .5em;
-                text-align: center;
-                color: $grey;
-                transition: all .2s cubic-bezier(.175, .685, .32, 1);
-                > div{
-                    object-fit: contain;
-                    overflow: hidden;
-                    img{
-                        width:100%;
-                        transition: all .2s cubic-bezier(.175, .685, .32, 1);
-                        &:hover{
-                            transform: scale(1.2);
-                        }
-                    }
-                }
-                &.small-img{
-                    min-width:250px;
-                }
-                &.medium-img{
-                    min-width:380px;
-                }
-                p{
-                    margin-top: .5em;
-                    padding: .5em;
-                }
-                &:hover{
-                    color: $offwhite;
-                    background-color: $background-2;
-                    box-shadow: 0 17px 30px -10px $box-shadow;
-                }
-    
-            }
-            p{
-                code{
-                    font-style: italic;
-                    color: $accent;
-                    display: block;
-                    width: 100%;
-                    text-align: center;
-                }
-            }
-        }
-        .code-box{
-            h3.code-title{
-                text-align: center;
-            }
-            .cp_embed_iframe{
-                border: none;
-            }
-        }
-        .container-2-1{
-            grid-column: span 2;
-        }
-        .container-1-1{
-            grid-column: span 1;
-        }
-    }
-    span.box{
-        content: ' ';
-        transform: translateY(15%);
-        width: 1em;
-        height: 1em;
-        display: inline-block;
-        &.red{
-            background-color: #f00;
-        }
-        &.blue{
-            background-color: #00f;
-        }
-        &.purple{
-            background-color: $accent;
-        }
-    }
-}
+@import 'scrollbar';
+@import 'header';
+@import 'main';
+@import 'portfolio';

@@ -1,0 +1,35 @@
+.orbit{
+    position: relative;
+    top: 150px;
+    left: 220px;
+    width: 100px;
+    height: 100px;
+    transform-style: preserve-3d;
+    animation: orbit 40s linear infinite;
+    span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 6rem;
+        height: 6rem;
+        background-color: $background-600;
+        box-shadow: 0px 0px 5px $shadow-40;
+        border-radius: 50%;
+        transform-origin: center;
+        transform-style: preserve-3d;
+        transform: rotateX(calc(var(--i) * calc(360deg / 10))) translateZ(250px);
+    }
+    img{
+        position: relative;
+        top: 1rem;
+        left: 1rem;
+        height: 4rem;
+        width: 4rem;
+        filter: drop-shadow(0 0 5px $shadow-15);
+    }
+}
+
+@keyframes orbit {
+    0% { transform: perspective(1000px) rotateY(14deg) rotateX(0deg);}
+    100% { transform: perspective(1000px) rotateY(14deg) rotateX(360deg);}
+}

@@ -1,0 +1,124 @@
+#portfolio {
+    padding: 8.5rem 0 3rem 0;
+    min-height: 150vh;
+    background-color: $background-800;
+
+    >div {
+        align-items: unset;
+    }
+
+    .left-projects, .right-projects {
+        justify-content: space-between;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        min-width: 35vw;
+        min-height: 60vh;
+        max-height: 80vh;
+        background-color: $background-900;
+        padding: 1.25rem;
+        border-radius: 1rem;
+        margin: 1.25rem 0;
+        overflow: hidden;
+
+        .title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            h3 {
+                font-size: 2rem;
+                color: $offwhite;
+                font-weight: 400;
+            }
+
+        }
+
+        p{
+            width: 400px;
+            padding-right: 3rem;
+        }
+
+        img {
+            position: relative;
+        }
+
+        &#pr-1 {
+            img{
+                height: 30vh;
+                top: 3rem;
+                left: 11rem;
+                object-fit: cover;
+                transform: scale(1.4) rotate(-5deg);
+                transition: 0.3s ease-in-out;
+
+                &:hover{
+                    transform: scale(1.6) rotate(-5deg);
+                }
+            }
+        }
+
+        &#pr-2 {
+            img {
+                width: 25vw;
+                height: 30vh;
+                object-fit: cover;
+                object-position: top;
+                top: 5rem;
+                left: 9rem;
+                transform: scale(1.5);
+                border-radius: 0.5rem;
+                box-shadow: -0.625rem .625rem .625rem $shadow-80;
+                transition: 0.5s ease;
+
+                &:hover{
+                    box-shadow: -1.25rem 1.25rem 1.25rem $shadow-80;
+                }
+            }
+        }
+
+        &#pr-3 {
+            background-image: url(/images/waves-bottom.svg);
+            background-position: bottom;
+            background-size: cover;
+        }
+    }
+
+    .latest {
+        h3 {
+            font-size: 2.5rem;
+            color: $offwhite;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        p {
+            font-size: 0.875rem;
+            color: $accent-300;
+            font-weight: 400;
+            margin: 0;
+        }
+    }
+
+    .disclosure {
+        a {
+            color: $accent-300;
+            text-transform: uppercase;
+        }
+
+        >a {
+            font-size: 1.5rem;
+        }
+
+        p {
+            font-size: 0.875rem;
+            color: $background-500;
+            font-weight: 600;
+            letter-spacing: -1px;
+            line-height: 1.5rem;
+        }
+    }
+}
