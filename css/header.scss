@@ -1,0 +1,112 @@
+header{
+    background-color: $background-800-45;
+    color: $offwhite;
+
+    font-weight: 600;
+    // font-size: 1.125rem;
+    line-height: 1.5rem;
+
+    position: sticky;
+    top:0;
+    left:0;
+    z-index: 1;
+
+    backdrop-filter: blur(15px);
+    box-shadow: 0px 0px 10px 1px $shadow-15;
+
+    margin-bottom: -5rem;
+
+    nav{
+        max-width: 80vw;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-inline: auto;
+
+        img{
+            height: 3rem;
+            transition: all 0.25s cubic-bezier(0.175, 0.685, 0.32, 1);
+
+            &.small-logo{
+                display: none;
+            }
+        }
+
+        a{
+            color: inherit;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            position: relative;
+            transition: all 0.25s cubic-bezier(0.175, 0.685, 0.32, 1);
+
+            ion-icon{
+                padding-right: 0.25rem;
+                font-size: 1.125rem;
+            }
+
+            span{
+                height: min-content;
+            }
+
+            &:hover{
+                color: $accent-400;
+            }
+        }
+
+        div{
+            display: flex;
+
+            &.nav-list{
+                column-gap: 3rem;
+                margin: 0 auto;
+                
+                a:active, a.active{
+                    color: $accent-300;
+
+                    &::before, &::after{
+                        font-size: 0.875rem;
+                        position: absolute;
+                    }
+
+                    &::before{  
+                        content :'⟨';
+                        left: -0.875rem;
+                    }
+                    &::after{
+                        content: '〉';
+                        right: -0.875rem;
+                    }
+                }
+
+            }
+
+            &.nav-contact{
+                column-gap: 0.75rem;
+                font-size: 0.875rem;
+            }
+        }
+
+    }
+}
+
+@media (width < 900px) {
+    .collapsable{
+        span{
+            display: none;
+        }
+        .small-logo{
+            display: unset;
+        }
+        .wide-logo{
+            display: none;
+        }
+    }             
+}
+
+@media (width < 500px) {
+    .collapsable{
+        display: none;
+    }
+}

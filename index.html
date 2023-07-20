@@ -1,73 +1,144 @@
-<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-<link rel="manifest" href="favicon/site.webmanifest">
-<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
+<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#dcdcdc">
 <meta charset="UTF-8">
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="css/style.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="/js/navbar.js"></script>
 <title>Phillip Navarrete | Home</title>
 
-<nav id="navbar">
-    <ul class="navbar-items flexbox-col">
-        <li class="navbar-logo flexbox-left">
-            <a class="navbar-inner flexbox">
-                <img class="small-logo" src="images/logo/logo-short-white.png">
-                <img class="wide-logo" src="images/logo/logo-wide-white.png">
-            </a>
-        </li>
-        <li class="navbar-item flexbox-left">
-            <a class="navbar-inner flexbox-left" href="/">
-                <div class="navbar-item-inner-icon-wrapper flexbox">
-                    <ion-icon name="home-outline"></ion-icon>
-                </div>
-                <span class="link-text">Home</span>
-            </a>
-        </li>
-        <li class="navbar-item flexbox-left">
-            <a class="navbar-inner flexbox-left" href="projects">
-                <div class="navbar-item-inner-icon-wrapper flexbox">
-                    <ion-icon name="folder-open-outline"></ion-icon>
-                </div>
-                <span class="link-text">Projects</span>
-            </a>
-        </li>
-        <li class="navbar-item flexbox-left">
-            <a class="navbar-inner flexbox-left" href="experience">
-                <div class="navbar-item-inner-icon-wrapper flexbox">
-                    <ion-icon name="person-outline"></ion-icon>
-                </div>
-                <span class="link-text">Experience</span>
-            </a>
-        </li>
-        <li class="navbar-item flexbox-left">
-            <a class="navbar-inner flexbox-left" href="research">
-                <div class="navbar-item-inner-icon-wrapper flexbox">
-                    <ion-icon name="flask-outline"></ion-icon>
-                </div>
-                <span class="link-text">Research</span>
-            </a>
-        </li>
-    </ul>
-</nav>
+<header>
+    <nav id="navbar">
+        <div class="collapsable">
+            <img class="small-logo" src="/images/logo/logo-short-white.png">
+            <img class="wide-logo" src="/images/logo/logo-wide-white.png">
+        </div>
+        <div class="nav-list">
+            <a href="/" class="active">Home</a>
+            <a href="/portfolio">Portfolio</a>
+            <!-- <a href="#"></a> -->
+        </div>
+        <div class="nav-contact">
+            <a href="https://www.github.com/phippp" target="_blank" class="collapsable"><ion-icon name="logo-github"></ion-icon><span>GitHub</span></a>
+            <a href="https://www.linkedin.com/in/phillip-navarrete" target="_blank" class="collapsable"><ion-icon name="logo-linkedin"></ion-icon><span>LinkedIn</span></a>
+        </div>
+    </nav>
+</header>
 
-<main class="home">
-    <h1 class="main-title">Phillip Navarrete</h1>
-    <h4 class="welcome-message">Hello, welcome to my portfolio...</h4>
-    <p class="about-me">I am a University Graduate currently employed as a Java Tools Developer.</p>
-    <div class="socials-container">
-        <p>You can visit me at any of the following:</p>
-        <a href="https://github.com/Phippp" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
-        <a href="https://discordapp.com/users/243031735082811393" target="_blank"><ion-icon name="logo-discord"></ion-icon></a>
-        <a href="mailto:phillipvictor2000@gmail.com" target="_blank"><ion-icon name="mail"></ion-icon></a>
-        <a href="https://www.linkedin.com/in/phillip-navarrete/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+<section id="intro">
+    <div class="constrainer">
+        <div class="w-50">
+            <span class="badge badge-accent">Full-Stack Developer</span><span class="badge badge-accent">Designer</span>
+            <h1>Passionate Full Stack Developer: Building Digital Dreams</h1>
+            <p>I design and code beautifully simple things,<br/>and I love what I do.</p>
+            <a href="#contact">Let's chat!</a>
+            <div class="flex" id="stats">
+                <h4 class="number">2</h4><span>Years<br/>Experience</span><h4 class="number">4</h4><span>Projects<br/>Completed</span>
+            </div>
+        </div>
+        <div class="fixed">
+            <div class="orbit">
+                <span style="--i:1;"><img src="/images/icons8/icons8-adobe-photoshop.svg"></span>
+                <span style="--i:2;"><img src="/images/icons8/icons8-c.svg"></span>
+                <span style="--i:3;"><img src="/images/icons8/icons8-css-logo.svg"></span>
+                <span style="--i:4;"><img src="/images/icons8/icons8-figma.svg"></span>
+                <span style="--i:5;"><img src="/images/icons8/icons8-html-logo.svg"></span>
+                <span style="--i:6;"><img src="/images/icons8/icons8-java-logo.svg"></span>
+                <span style="--i:7;"><img src="/images/icons8/icons8-javascript.svg"></span>
+                <span style="--i:8;"><img src="/images/icons8/icons8-mysql-logo.svg"></span>
+                <span style="--i:9;"><img src="/images/icons8/icons8-python.svg"></span>
+                <span style="--i:10;"><img src="/images/icons8/icons8-github.svg"></span>
+            </div>
+        </div>
     </div>
-</main>
+</section>
+
+<section id="projects">
+    <div class="constrainer flex col-2">
+        <div class="cards">
+            <div class="card active">
+                <div><h3>Front-End Wizard</h3><ion-icon name="color-wand-outline"></ion-icon></div>
+                <p>Creating Visually Stunning Interfaces</p>
+                <a href="#">Link reason</a>
+            </div>
+            <div class="card">
+                <div><h3>Back-End Magician</h3><ion-icon name="color-wand-outline"></ion-icon></div>
+                <p>Powering Applications Behind the Scenes</p>
+                <a href="#">Link reason</a>
+            </div>
+            <div class="card">
+                <div><h3>Innovation Enthusiast</h3><ion-icon name="color-wand-outline"></ion-icon></div>
+                <p>Embracing Challenges and Innovating Solutions</p>
+                <a href="#">Link reason</a>
+            </div>
+        </div>
+        <div class="text" style="display: block;">
+            <h2>Hello! I'm Phillip Navarrete</h2>
+            <h4>The Web’s &amp; Mobile’s Magician</h4>
+            <p>
+                As a front-end developer, I love bringing designs to life and ensuring they work flawlessly 
+                across various devices and browsers. Leveraging modern frameworks like React and Vue.js, I 
+                strive to create interactive and engaging experiences that leave a lasting impact on users. 
+                Let's collaborate and turn your ideas into captivating web applications.
+            </p>
+        </div>
+        <div class="text">
+            <h2>Hello! I'm Phillip Navarrete</h2>
+            <h4>Powering Applications with Robust Server-Side Solutions</h4>
+            <p>
+                Dedicated back-end developer with a passion for building robust and scalable server-side 
+                applications. Proficient in Python, Node.js, and databases, I enjoy handling the logic and 
+                data management that powers modern web and mobile apps. My goal is to ensure the foundation 
+                is solid, enabling seamless user experiences on the front end.
+            </p>
+        </div>
+        <div class="text">
+            <h2>Hello! I'm Phillip Navarrete</h2>
+            <h4>Coding with Efficiency</h4>
+            <p>
+                An all-around full stack developer who thrives on tackling diverse challenges. From implementing 
+                complex features to optimizing application performance, I take pride in my versatility. With a 
+                passion for continuous learning, I'm always excited to explore emerging technologies and find 
+                innovative solutions for real-world problems.
+            </p>
+        </div>
+    </div>
+
+</section>
+
+<section id="contact">
+    <div class="constrainer flex col-2">
+        <div>
+            <form id="my-form" method="post" action="https://formspree.io/f/xzbygvwb">
+                <div class="bg"></div>
+                <h2>Start by <span>saying hi</span></h2>
+                <input type="text" name="name" id="form-name" placeholder="Your name" required>
+                <input type="email" name="email" id="form-email" placeholder="Email Address">
+                <textarea name="message" id="form-message" placeholder="Write your message here..."></textarea>
+                <button name="submit" type="submit">Send</button>
+                <p id="my-form-status"></p>
+            </form>
+
+        </div>
+        <div id="details">
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/phillip-navarrete" style="--color:rgb(0, 119, 181);" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+                <a href="https://www.github.com/phippp" style="--color:rgb(232, 232, 232);" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
+                <a href="mailto:phillipvictor2000@gmail.com" style="--color:rgb(234, 67, 53);"><ion-icon name="mail-outline"></ion-icon></a>
+            </div>
+            <img src="/images/logo/logo-wide-white.png">
+            <p>Icons by <a href="https://icons8.com/" target="_blank">icons8</a></p>
+        </div>
+    </div>
+</section>
+
+<script src="/js/cards.js"></script>
+<script src="/js/form.js"></script>

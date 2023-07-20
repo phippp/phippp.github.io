@@ -1,0 +1,114 @@
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
+<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#dcdcdc">
+<meta charset="UTF-8">
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<title>Phillip Navarrete | Portfolio</title>
+
+<header>
+    <nav id="navbar">
+        <div class="collapsable">
+            <img class="small-logo" src="/images/logo/logo-short-white.png">
+            <img class="wide-logo" src="/images/logo/logo-wide-white.png">
+        </div>
+        <div class="nav-list">
+            <a href="/">Home</a>
+            <a href="/portfolio" class="active">Portfolio</a>
+            <!-- <a href="#"></a> -->
+        </div>
+        <div class="nav-contact">
+            <a href="https://www.github.com/phippp" target="_blank" class="collapsable"><ion-icon name="logo-github"></ion-icon><span>GitHub</span></a>
+            <a href="https://www.linkedin.com/in/phillip-navarrete" target="_blank" class="collapsable"><ion-icon name="logo-linkedin"></ion-icon><span>LinkedIn</span></a>
+        </div>
+    </nav>
+</header>
+
+<section id="portfolio">
+    <div class="constrainer flex col-2">
+        <div class="left-projects">
+            <div class="latest"><h3>My Portfolio</h3><p>Yes this is it...</p></div>
+            <div id="pr-2" class="project-card">
+                <div class="title">
+                    <h3>Maze</h3>
+                    <div>
+                        <span class="badge badge-sm">TypeScript</span>
+                    </div>
+                </div>
+                <p>
+                    An exciting experiment with TypeScript, this project delved into creating a 
+                    maze generator while setting up the relevant compiler for smooth development.
+                </p>
+                <img src="images/Maze.gif" alt="" id="project-img-2">
+            </div>
+            <div class="disclosure"><a href="#">All projects</a><p>* Some projects are restricted if you want</br>to see more. <a href="#contact">contact</a></p></div>
+        </div>
+        <div class="right-projects">
+            <div id="pr-1" class="project-card">
+                <div class="title">
+                    <h3>C Programming</br> Language</h3>
+                    <div>
+                        <span class="badge badge-sm">C</span>
+                    </div>
+                </div>
+                <p>
+                    This project served as a stepping stone to learning the fundamentals of the C 
+                    programming language. It involved completing challenges from a programming book 
+                    to gain hands-on experience and familiarize myself with C.
+                </p>
+                <img src="/images/c-programming.jpg" alt="" id="project-img-1">
+            </div>
+            <div id="pr-3" class="project-card">
+                <div class="title">
+                    <h3>Regex Compiler</h3>
+                    <div>
+                        <span class="badge badge-sm">ANTLR4</span>
+                        <span class="badge badge-sm">Java</span>
+                    </div>
+                </div>
+                <p>
+                    Developed in Java using ANTLR4 and Maven, this project aimed to create a secure 
+                    alternative to existing compilers, preventing potential exploitation via ReDoS 
+                    (Regular Expression Denial of Service) attacks.
+                </p>
+            </div>
+        </div>
+    </div> 
+</section>
+
+<section id="contact">
+    <div class="constrainer flex col-2">
+        <div>
+            <form id="my-form" method="post" action="https://formspree.io/f/xzbygvwb">
+                <div class="bg"></div>
+                <h2>Start by <span>saying hi</span></h2>
+                <input type="text" name="name" id="form-name" placeholder="Your name" required>
+                <input type="email" name="email" id="form-email" placeholder="Email Address">
+                <textarea name="message" id="form-message" placeholder="Write your message here..."></textarea>
+                <button name="submit" type="submit">Send</button>
+                <p id="my-form-status"></p>
+            </form>
+
+        </div>
+        <div id="details">
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/phillip-navarrete" style="--color:rgb(0, 119, 181);" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+                <a href="https://www.github.com/phippp" style="--color:rgb(232, 232, 232);" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
+                <a href="mailto:phillipvictor2000@gmail.com" style="--color:rgb(234, 67, 53);"><ion-icon name="mail-outline"></ion-icon></a>
+            </div>
+            <img src="/images/logo/logo-wide-white.png">
+            <p>Icons by <a href="https://icons8.com/" target="_blank">icons8</a></p>
+        </div>
+    </div>
+</section>
+
+<script src="/js/form.js"></script>
